@@ -1,0 +1,16 @@
+{
+    "image": "nikolaik/python-nodejs:python3.10-nodejs17-bullseye",
+    "forwardPorts": [5000, 8000],
+    "containerUser": "pn",
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "mutantdino.resourcemonitor",
+        "ms-python.python",
+        "nick-rudenko.back-n-forth"
+    ],
+    "workspaceMount": "",
+	"runArgs": ["--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z", "--userns=keep-id"],
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/home/pn/.local/bin"
+    }
+}

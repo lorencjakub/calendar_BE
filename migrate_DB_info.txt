@@ -1,0 +1,17 @@
+Set FLASK_APP as a enviroment variable if you got "could not locate
+flask application" Error:
+
+set FLASK_APP=migrate_db.py
+
+*********************************************************************
+
+flask db init - create a new DB or enable DB migration if any DB
+exists already
+
+*********************************************************************
+
+flask db migrate -m "MESSAGE" - create a new migrate version
+
+*********************************************************************
+
+flask db upgrade/downgrade - upgrade/downgrade DB
